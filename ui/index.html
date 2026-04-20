@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backpack Inventory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" class="hidden">
+    <section class="backpack-shell">
+      <div class="strap strap-left"></div>
+      <div class="strap strap-right"></div>
+
+      <header class="backpack-header">
+        <h1 id="title">Backpack</h1>
+        <button id="closeBtn" aria-label="Close">X</button>
+      </header>
+
+      <section class="weight-wrap">
+        <div class="weight-row">
+          <span>Carry Weight</span>
+          <span id="weightLabel">0 / 0 kg</span>
+        </div>
+        <div class="weight-bar">
+          <div id="weightFill"></div>
+        </div>
+      </section>
+
+      <section id="items" class="item-grid"></section>
+    </section>
+  </main>
+
+  <template id="itemTemplate">
+    <article class="item-card">
+      <div class="item-top">
+        <div class="item-icon">🎒</div>
+        <div class="item-meta">
+          <h3 class="item-label"></h3>
+          <p class="item-sub"></p>
+        </div>
+      </div>
+      <div class="item-actions">
+        <button class="use-btn">Use</button>
+        <button class="drop-btn">Drop</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
